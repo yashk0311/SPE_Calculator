@@ -22,42 +22,68 @@ public class Main {
             int a, b;
             switch (option){
                 case 1:
-                    System.out.println("Please enter 1st Number: ");
+                    System.out.println("Please enter 1st operand: ");
                     a = scanner.nextInt();
-                    System.out.println("Please enter 2nd Number: ");
+                    System.out.println("Please enter 2nd operand: ");
                     b = scanner.nextInt();
 
-                    System.out.print("Sum of the given two numbers = ");
-                    System.out.println(a+b);
+
+                    System.out.println("-------------- Result ------------- ");
+                    System.out.print(a);
+                    System.out.print(" + ");
+                    System.out.print(b);
+                    System.out.print(" = ");
+                    System.out.print(a+b);
+                    System.out.println();
+                    System.out.println("------------------------------------");
                     break;
 
                 case 2:
-                    System.out.println("Please enter 1st Number: ");
+                    System.out.println("Please enter 1st operand: ");
                     a = scanner.nextInt();
-                    System.out.println("Please enter 2nd Number: ");
+                    System.out.println("Please enter 2nd operand: ");
                     b = scanner.nextInt();
 
-                    System.out.print("Difference of the given two numbers = ");
-                    System.out.println(a-b);
+                    System.out.println("-------------- Result ------------- ");
+                    System.out.print(a);
+                    System.out.print(" - ");
+                    System.out.print(b);
+                    System.out.print(" = ");
+                    System.out.print(a-b);
+                    System.out.println();
+                    System.out.println("------------------------------------");
                     break;
 
                 case 3:
-                    System.out.println("Please enter 1st Number: ");
+                    System.out.println("Please enter 1st operand: ");
                     a = scanner.nextInt();
-                    System.out.println("Please enter 2nd Number: ");
+                    System.out.println("Please enter 2nd operand: ");
                     b = scanner.nextInt();
 
-                    System.out.print("Multiplication of the given two numbers = ");
-                    System.out.println((long)a*b);
+                    System.out.println("-------------- Result ------------- ");
+                    System.out.print(a);
+                    System.out.print(" x ");
+                    System.out.print(b);
+                    System.out.print(" = ");
+                    System.out.print((long)a*b);
+                    System.out.println();
+                    System.out.println("------------------------------------");
                     break;
 
                 case 4:
-                    System.out.println("Please enter dividend: ");
+                    System.out.println("Please enter 1st operand: ");
                     a = scanner.nextInt();
-                    System.out.println("Please enter divider: ");
+                    System.out.println("Please enter 2nd operand: ");
                     b = scanner.nextInt();
-                    System.out.print("Division of the given two numbers = ");
-                    System.out.println((float)a/b);
+
+                    System.out.println("-------------- Result ------------- ");
+                    System.out.print(a);
+                    System.out.print(" / ");
+                    System.out.print(b);
+                    System.out.print(" = ");
+                    System.out.print((float)a/b);
+                    System.out.println();
+                    System.out.println("------------------------------------");
                     break;
                 case 5:
                     return;
