@@ -1,32 +1,45 @@
 package org.example;
 import java.util.Scanner;
-
-class Calculator {
-    public int add(int a, int b) {
-        return a + b;
-    }
-
-    public int subtract(int a, int b) {
-        return a - b;
-    }
-
-    public long multiply(int a, int b) {
-        return (long) a * b;
-    }
-
-    public float divide(int a, int b) {
-        if (b != 0) {
-            return (float) a / b;
-        } else {
-            System.out.println("Error: Division by zero.");
-            return 0;
-        }
-    }
-}
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Main {
+
+        public static int add(int a, int b) {
+            logger.info("START OP: Add");
+            int ans = a + b;
+            logger.info("END OP: Add");
+            return ans;
+        }
+
+        public static int subtract(int a, int b) {
+            logger.info("START OP: Subtract");
+            int ans = a - b;
+            logger.info("END OP: Subtract");
+            return a - b;
+        }
+
+        public static long multiply(int a, int b) {
+            logger.info("START OP: Multiply");
+            long ans = (long)a*b;
+            logger.info("END OP: Multiply");
+            return ans;
+        }
+
+        public static float divide(int a, int b) {
+            logger.info("START OP: Division");
+            float ans = 0;
+            if (b != 0) {
+                ans = (float)a/b;
+            } else {
+                System.out.println("Error: Division by zero.");
+            }
+            logger.info("END OP: Division");
+            return ans;
+        }
+    private static final Logger logger = LogManager.getLogger(Main.class);
     public static void main(String[] args) {
-        Calculator calculator = new Calculator();
+        logger.info("Start of Execution");
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Hello and welcome to the Calculator Program!");
@@ -47,7 +60,7 @@ public class Main {
                     System.out.println("Please enter 2nd operand: ");
                     b = scanner.nextInt();
                     System.out.println("-------------- Result ------------- ");
-                    System.out.println(a + " + " + b + " = " + calculator.add(a, b));
+                    System.out.println(a + " + " + b + " = " + add(a, b));
                     System.out.println("------------------------------------");
                     break;
 
@@ -57,8 +70,9 @@ public class Main {
                     System.out.println("Please enter 2nd operand: ");
                     b = scanner.nextInt();
                     System.out.println("-------------- Result ------------- ");
-                    System.out.println(a + " - " + b + " = " + calculator.subtract(a, b));
+                    System.out.println(a + " - " + b + " = " + subtract(a, b));
                     System.out.println("------------------------------------");
+
                     break;
 
                 case 3:
@@ -67,7 +81,7 @@ public class Main {
                     System.out.println("Please enter 2nd operand: ");
                     b = scanner.nextInt();
                     System.out.println("-------------- Result ------------- ");
-                    System.out.println(a + " x " + b + " = " + calculator.multiply(a, b));
+                    System.out.println(a + " x " + b + " = " + multiply(a, b));
                     System.out.println("------------------------------------");
                     break;
 
@@ -77,7 +91,7 @@ public class Main {
                     System.out.println("Please enter 2nd operand: ");
                     b = scanner.nextInt();
                     System.out.println("-------------- Result ------------- ");
-                    System.out.println(a + " / " + b + " = " + calculator.divide(a, b));
+                    System.out.println(a + " / " + b + " = " + divide(a, b));
                     System.out.println("-----------------------------------");
                     break;
 
@@ -86,6 +100,7 @@ public class Main {
 
                 default:
                     System.out.println("Invalid option. Please choose a valid operation.");
+                    logger.info("Invalid option Selected");
                     break;
             }
         }
