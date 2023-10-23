@@ -30,9 +30,9 @@ public class CalculatorTest {
 
     @Test
     public void test_sub_positive(){
-        int a = 3;
+        int a = 4;
         int b = 2;
-        int expectedResult = 1;
+        int expectedResult = 2;
         Assert.assertEquals(expectedResult, calculator.subtract(a,
                 b));
     }
