@@ -33,6 +33,7 @@ public class Main {
                 ans = (float)a/b;
             } else {
                 System.out.println("Error: Division by zero.");
+                logger.info("OP FAILED: Division, failed due to division by 0");
             }
             logger.info("END OP: Division");
             return ans;
