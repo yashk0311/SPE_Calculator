@@ -31,11 +31,11 @@ public class Main {
             float ans = 0;
             if (b != 0) {
                 ans = (float)a/b;
+                logger.info("END OP: Division");
             } else {
                 System.out.println("Error: Division by zero.");
                 logger.info("OP FAILED: Division, failed due to division by 0");
             }
-            logger.info("END OP: Division");
             return ans;
         }
     private static final Logger logger = LogManager.getLogger(Main.class);
@@ -97,6 +97,7 @@ public class Main {
                     break;
 
                 case 5:
+                    System.out.println("Thank you!");
                     return;
 
                 default:
