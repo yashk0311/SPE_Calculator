@@ -34,7 +34,7 @@ public class Main {
                 logger.info("END OP: Division");
             } else {
                 System.out.println("Error: Division by zero.");
-                logger.info("OP FAILED: Division, failed due to division by 0");
+                logger.warn("OP FAILED: Division, failed due to division by 0");
             }
             return ans;
         }
